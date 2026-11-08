@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Cloud Storage Guide 2026</title>
+  <meta name="description" content="Best free cloud storage options for Android and iOS in 2026, plus how to host this site on GitHub Pages." />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2332;
+      --text: #e7ecf3;
+      --muted: #8b9bb4;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --success: #22c55e;
+      --border: #2d3a4f;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 2.5rem 0 2rem;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin: 1.25rem 0 0.5rem;
+    }
+
+    p, li {
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: #15202b;
+      color: var(--text);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(59, 130, 246, 0.06);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: rgba(34, 197, 94, 0.15);
+      color: var(--success);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    a.btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.45rem 0.9rem;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.15s;
+    }
+
+    a.btn:hover {
+      background: var(--accent-hover);
+    }
+
+    a.btn.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    a.btn.secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .warning {
+      background: rgba(234, 179, 8, 0.1);
+      border: 1px solid rgba(234, 179, 8, 0.35);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+    }
+
+    .warning strong {
+      color: #fbbf24;
+    }
+
+    ol, ul {
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    code {
+      background: #15202b;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+      color: #93c5fd;
+    }
+
+    .steps {
+      counter-reset: step;
+    }
+
+    .steps li {
+      position: relative;
+      padding-left: 0.5rem;
+      margin-bottom: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      th, td {
+        padding: 0.7rem 0.6rem;
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Free Cloud Storage Guide</h1>
+      <p>Best free options for Android &amp; iOS in 2026</p>
+    </header>
+
+    <section>
+      <h2>Quick Comparison</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Free Space</th>
+              <th>Encryption</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>MEGA</strong></td>
+              <td><span class="badge">20 GB</span></td>
+              <td>Zero-knowledge</td>
+              <td>Most free space + privacy</td>
+            </tr>
+            <tr>
+              <td><strong>Google Drive</strong></td>
+              <td><span class="badge">15 GB</span></td>
+              <td>Standard</td>
+              <td>Android &amp; Gmail users</td>
+            </tr>
+            <tr>
+              <td><strong>Box</strong></td>
+              <td>10 GB</td>
+              <td>Standard</td>
+              <td>Documents (250 MB file limit)</td>
+            </tr>
+            <tr>
+              <td><strong>pCloud</strong></td>
+              <td>Up to 10 GB</td>
+              <td>Optional paid</td>
+              <td>General use</td>
+            </tr>
+            <tr>
+              <td><strong>OneDrive</strong></td>
+              <td>5 GB</td>
+              <td>Standard</td>
+              <td>Windows / Office users</td>
+            </tr>
+            <tr>
+              <td><strong>iCloud</strong></td>
+              <td>5 GB</td>
+              <td>Standard</td>
+              <td>iPhone &amp; Mac</td>
+            </tr>
+            <tr>
+              <td><strong>Proton Drive</strong></td>
+              <td>5 GB</td>
+              <td>Zero-knowledge</td>
+              <td>Privacy-focused</td>
+            </tr>
+            <tr>
+              <td><strong>Dropbox</strong></td>
+              <td>2 GB</td>
+              <td>Standard</td>
+              <td>Reliable sync</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 0.75rem; font-size: 0.9rem;">Free tiers checked around late 2026. New Google accounts may start lower and unlock more after phone verification.</p>
+    </section>
+
+    <section>
+      <h2>Recommended Apps</h2>
+
+      <div class="card">
+        <h3>MEGA — Most free space</h3>
+        <p>20 GB free with end-to-end (zero-knowledge) encryption. Excellent mobile apps. Camera upload supported.</p>
+        <div class="links">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=mega.privacy.android.app" target="_blank" rel="noopener">Android (Play Store)</a>
+          <a class="btn" href="https://apps.apple.com/app/mega/id706857885" target="_blank" rel="noopener">iOS (App Store)</a>
+          <a class="btn secondary" href="https://mega.io" target="_blank" rel="noopener">Website</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Google Drive — Best for Android</h3>
+        <p>Up to 15 GB shared with Gmail and Google Photos. Already on most Android phones. Deep integration with Docs/Sheets.</p>
+        <div class="links">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs" target="_blank" rel="noopener">Android</a>
+          <a class="btn" href="https://apps.apple.com/app/google-drive/id507874739" target="_blank" rel="noopener">iOS</a>
+          <a class="btn secondary" href="https://drive.google.com" target="_blank" rel="noopener">Website</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Microsoft OneDrive</h3>
+        <p>5 GB free. Strong if you use Windows or Office. Camera backup available.</p>
+        <div class="links">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.microsoft.skydrive" target="_blank" rel="noopener">Android</a>
+          <a class="btn" href="https://apps.apple.com/app/microsoft-onedrive/id477537958" target="_blank" rel="noopener">iOS</a>
+          <a class="btn secondary" href="https://onedrive.live.com" target="_blank" rel="noopener">Website</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Apple iCloud</h3>
+        <p>5 GB free. Native on iPhone. Best for full device backups and photos if you stay in the Apple ecosystem.</p>
+        <div class="links">
+          <a class="btn" href="https://www.icloud.com" target="_blank" rel="noopener">iCloud.com</a>
+          <a class="btn secondary" href="https://support.apple.com/icloud" target="_blank" rel="noopener">Support</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Proton Drive</h3>
+        <p>5 GB free with strong privacy focus and zero-knowledge encryption.</p>
+        <div class="links">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=me.proton.android.drive" target="_blank" rel="noopener">Android</a>
+          <a class="btn" href="https://apps.apple.com/app/proton-drive/id1509667851" target="_blank" rel="noopener">iOS</a>
+          <a class="btn secondary" href="https://proton.me/drive" target="_blank" rel="noopener">Website</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why You Can’t Host Real Cloud Storage on GitHub Pages</h2>
+      <div class="warning">
+        <strong>Important:</strong> GitHub Pages is static hosting only. It serves HTML, CSS, and JavaScript files. It has no server-side code, no database, and no way to permanently store files that users upload.
+      </div>
+      <p>A real cloud storage service needs:</p>
+      <ul>
+        <li>Backend servers to handle uploads</li>
+        <li>Object storage (or equivalent) to keep the files</li>
+        <li>Authentication and user accounts</li>
+        <li>Bandwidth and ongoing costs</li>
+      </ul>
+      <p>None of that is available on free GitHub Pages. You cannot build a Dropbox/Google Drive clone that works for the public just by putting a website on GitHub.</p>
+    </section>
+
+    <section>
+      <h2>How to Host <em>This</em> Website on GitHub Pages</h2>
+      <p>This page is a simple static site. You can put it online for free in a few minutes.</p>
+
+      <ol class="steps">
+        <li>
+          <strong>Create a new repository</strong> on GitHub.<br>
+          Name it something like <code>free-cloud-storage</code> (or <code>yourusername.github.io</code> for a user site). Make it <strong>Public</strong>.
+        </li>
+        <li>
+          <strong>Upload this file</strong>. Click “Add file” → “Upload files” and drag <code>index.html</code> into the repository (or create the file and paste the code). Commit the changes.
+        </li>
+        <li>
+          Go to the repository <strong>Settings</strong> → <strong>Pages</strong> (left sidebar).
+        </li>
+        <li>
+          Under “Build and deployment” → Source, choose <strong>Deploy from a branch</strong>.
+        </li>
+        <li>
+          Select branch <code>main</code> (or <code>master</code>) and folder <code>/(root)</code>. Click <strong>Save</strong>.
+        </li>
+        <li>
+          Wait 1–2 minutes. Your site will be live at:<br>
+          <code>https://yourusername.github.io/repository-name/</code>
+        </li>
+      </ol>
+      <p>That’s it. No build tools required.</p>
+    </section>
+
+    <section>
+      <h2>Using GitHub as Personal Storage (Advanced)</h2>
+      <p>You can use your own GitHub repositories as a personal file store via the GitHub API. This is <strong>not</strong> a public cloud storage service — it is only for your own account.</p>
+      <ul>
+        <li>Recommended repo size: keep under ~1 GB</li>
+        <li>API upload limit is usually 25 MB per file</li>
+        <li>Hard GitHub limit is 100 MB per file</li>
+        <li>You need a personal access token or OAuth app</li>
+      </ul>
+      <p>There are open-source web UIs (such as projects named “GitCloud”) that give a nicer interface on top of the GitHub API. Search GitHub for “GitHub cloud storage” or “Git as cloud drive” if you want a ready-made tool.</p>
+      <p>For everyday photos, documents, and phone backups, the dedicated free services above (especially MEGA or Google Drive) are far more practical and reliable.</p>
+    </section>
+
+    <section>
+      <h2>Quick Tips</h2>
+      <ul>
+        <li>Enable <strong>camera upload</strong> in the mobile apps so photos backup automatically.</li>
+        <li>Stack multiple free accounts (different services) if you need more space without paying.</li>
+        <li>For privacy, prefer services that offer zero-knowledge encryption (MEGA, Proton Drive).</li>
+        <li>Always keep important files in more than one place.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Static guide · No tracking · Free to host on GitHub Pages</p>
+      <p style="margin-top: 0.4rem;">Data current as of late 2026. Check official sites for the latest free-tier details.</p>
+    </footer>
+  </div>
+</body>
+</html>
